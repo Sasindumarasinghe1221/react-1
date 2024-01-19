@@ -1,4 +1,3 @@
-import BodyContent from "./Components/BodyContent/BodyContent"
 import HeaderContent from "./Components/HeaderContent/HeaderContent"
 
 
@@ -8,7 +7,7 @@ function App() {
     <>
     <div id="wrapper">
     <HeaderContent/>
-    <BodyContent/>
+    
     </div>
       
     </>
