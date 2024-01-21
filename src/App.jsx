@@ -1,36 +1,17 @@
 
-
+import './App.css';
 function App() {
-
-  function hello(e){
-    console.log("sasi 1" , e.target);
-  }
-  //arraw function 
-  const hello2 = (e) => {
-    console.log("marasinghe", e);
-
-  }
-//using paramites
-function hello3(name,e){
-  console.log("hello 3" + name,e);
-}
-
-const hello4 = (name,e) => {
-  console.log("hello 4" + name,e);
-}
-  return (
-    <>
-    <div id="wrapper">
-      <button onClick={hello}>click 1</button>
-      <br />
-      <button onClick={hello2}>click 2</button>
-      <br />
-      
-      <button onClick={(e) => {hello3( "sachindra",e)}}>click 3</button> <br />
-      <button onClick={(e) => {hello4( "mala",e.target)}}>click 4</button>
-
-
-    
+  const styles_div = {
+    color:'pink'
+  } 
+    return (
+  <>
+  <div>
+    <p className='p1'>
+      ryjthyjgtrhttth dgt
+    </p>
+    <p style={{color:'green'}}>adggd bdff</p>
+    <p style={styles_div}>drfftvfg vvvgg</p>
     </div>
       
     </>
