@@ -1,12 +1,15 @@
 import React from 'react'
 import './HeaderContent.css'
-import logoimage from '../../assets/react.svg'
+import Links from '../Links/Links'
+import logo from '../../assets/react.svg'
 
 function HeaderContent() {
   return (
-    <div id="navcontent">
-        <img src="vite.svg" alt="vite logo" />
-        <img src={logoimage}alt="react logo" />
+    <div id="header">
+       <div>
+        <img src={logo}  />  <Links/>
+       </div>
+     
         
   </div>
   )

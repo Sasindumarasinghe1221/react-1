@@ -1,17 +1,19 @@
 
 import './App.css';
+import HeaderContent from './Components/HeaderContent/HeaderContent';
+import BodyContent from './Components/BodyContent/BodyContent';
 function App() {
-  const styles_div = {
-    color:'pink'
-  } 
+
+  
     return (
   <>
-  <div>
-    <p className='p1'>
-      ryjthyjgtrhttth dgt
-    </p>
-    <p style={{color:'green'}}>adggd bdff</p>
-    <p style={styles_div}>drfftvfg vvvgg</p>
+  <div id="wrapper">
+    <HeaderContent/>
+    <BodyContent>
+      <h3>Home page</h3>
+    </BodyContent>
+
+ 
     </div>
       
     </>
