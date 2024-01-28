@@ -1,26 +1,27 @@
 
 
 import './App.css';
-import Loggedin from './Components/Loggedin';
-import LoggedOut from './Components/LoggedOut';
+
 function App() {
 
-  const loggedin = true;
-  const names = ["jone","smith"];
-  const namescount = names.length;
+  function sum (...somenumbers){
+    let total = 0;
+    somenumbers.forEach(somenumber => {
+      total = total + somenumber;
+    });
+    return total;
+
+  }
+  console.log(sum(1,2,3,4,5,6,7,8))
+  
+  function mybio(name,channel,...rest){
+    console.log(name,channel,rest)
+
+  }
+  mybio("sasindu","facebook","a","b")
 return (
   <>
-  {loggedin && <Loggedin/>}
-  {!loggedin && <LoggedOut/>}
-  {namescount > 0 && names.map((name)=>{
-    return <h2>{name}</h2>
-  })}
-  {namescount == 0 && <p>None provided</p> }
   
-  {namescount > 0 ? (names.map((name)=>{
-    return <h2>{name}</h2>
-  })) : ( <p>None </p> )}
-
   </>
 )
 
