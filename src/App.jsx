@@ -1,57 +1,29 @@
 
-import { useEffect, useState } from 'react';
+
 import './App.css';
+import Loggedin from './Components/Loggedin';
+import LoggedOut from './Components/LoggedOut';
 function App() {
-//let num1 = 2;
-//value ekak dinamicaly venas krnva nm meka bavitha kranna mekata kynne reacthook kyla
-const [num1,setnum1] = useState(2)
-const [count,setcount] = useState(2);
-const [clicks,setclicks] = useState(0);
-const [posts,setposts] = useState([]);
 
-
-function handleClick(){
-  //num1 = 3;
-  setnum1(3)
-  //alert(num1)
-}
-  
-const decrementFunction = () => {
-    setcount(count - 1)
-}
-const incrementFunction = () => {
-  setcount(count + 1)
-}
-
-// useEffect(()=>{
-//   console.log("hi")
-// },[num1 ])
-
-useEffect(() => {
-  document.title = `you clicked ${clicks}times`;
-},[count]);
-
-
-    return (
+  const loggedin = true;
+  const names = ["jone","smith"];
+  const namescount = names.length;
+return (
   <>
-  <div id="wrapper">
-   <button onClick={handleClick}>Click</button>
-<p>{num1}</p>
+  {loggedin && <Loggedin/>}
+  {!loggedin && <LoggedOut/>}
+  {namescount > 0 && names.map((name)=>{
+    return <h2>{name}</h2>
+  })}
+  {namescount == 0 && <p>None provided</p> }
+  
+  {namescount > 0 ? (names.map((name)=>{
+    return <h2>{name}</h2>
+  })) : ( <p>None </p> )}
 
-<p>Counter</p>
-<button onClick={decrementFunction}>-</button> 
-<button onClick={incrementFunction}>+</button>
-<p>{count}</p>
+  </>
+)
 
-<p>you clicked {clicks}time</p>
-<button onClick={() => setclicks(clicks + 1)}></button>
-
-Click me
-    </div>
-      
-    </>
-    
-  )
 }
 
 export default App
